@@ -1,0 +1,23 @@
+body {
+  background: #000;
+  font-family: "Krona One", sans-serif;
+  display: -ms-grid;
+  display: grid;
+}
+
+.test {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  height: 500px;
+  width: 500px;
+  background: #2a3c31;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (10%)[10];
+      grid-template-rows: repeat(10, 10%);
+  -ms-grid-columns: (10%)[10];
+      grid-template-columns: repeat(10, 10%);
+}
+/*# sourceMappingURL=balloons.css.map */

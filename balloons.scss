@@ -1,0 +1,18 @@
+body {
+  background: #000;
+  font-family: "Krona One", sans-serif;
+  display: grid;
+}
+
+.test {
+  justify-self: center;
+  align-self: center;
+  
+  height: 500px;
+  width: 500px;
+  background: #2a3c31;
+  
+  display: grid;
+  grid-template-rows: repeat(10,10%);
+  grid-template-columns: repeat(10,10%);
+}
