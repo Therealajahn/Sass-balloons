@@ -56,6 +56,10 @@ function putPixel(x, y){
         let pixel = document.createElement('div');
         pixel.style.background =  '#BE4154';
         pixel.style.gridArea = `x${x}y${y}`;
+        pixel.style.textAlign = 'center';
+        pixel.style.color = '#D9DEBA';
+        pixel.style.fontSize = '23px';
+        pixel.innerHTML = 'Y';
         grid.appendChild(pixel);
         i++;
     }
@@ -93,4 +97,5 @@ function circleBres(xc,yc, r) {
     } 
 } 
 
-circleBres(0,0,7);
+circleBres(0,0,5);
+
