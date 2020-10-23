@@ -15,9 +15,13 @@ body {
   background: #2a3c31;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (10%)[10];
-      grid-template-rows: repeat(10, 10%);
-  -ms-grid-columns: (10%)[10];
-      grid-template-columns: repeat(10, 10%);
+  -ms-grid-rows: (5%)[20];
+      grid-template-rows: repeat(20, 5%);
+  -ms-grid-columns: (5%)[20];
+      grid-template-columns: repeat(20, 5%);
+}
+
+.pixel {
+  background: #BE4154;
 }
 /*# sourceMappingURL=balloons.css.map */

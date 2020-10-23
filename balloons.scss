@@ -13,6 +13,10 @@ body {
   background: #2a3c31;
   
   display: grid;
-  grid-template-rows: repeat(10,10%);
-  grid-template-columns: repeat(10,10%);
+  grid-template-rows: repeat(20,5%);
+  grid-template-columns: repeat(20,5%);
+}
+
+.pixel{
+  background: #BE4154;
 }

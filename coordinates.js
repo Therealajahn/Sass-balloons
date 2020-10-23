@@ -16,13 +16,29 @@ function generateGridAreas(el,length){
             coordinates += '"\n';
             y--;
         }
-        
-        
         c++;
     }
-    console.log(coordinates);
+    
     grid.style.gridTemplateAreas = `${coordinates}`;
+    assigncoordinates('pixel',length);
 }
+
+
+function assigncoordinates(el,length){
+    
+    let pixels = document.getElementsByClassName(el);
+    
+    Array.from(pixels).forEach(pixel =>{
+        pixel.style.gridArea = randomizeXY(length);
+    })
+} 
+
+function randomizeXY(length){
+    let randomX =  Math.floor(Math.random() * length) - (length / 2 - 1);
+    let randomY =  Math.floor(Math.random() * length) - (length / 2 - 1);
+    return `x${randomX}y${randomY}`;
+}
+
 
 
 
