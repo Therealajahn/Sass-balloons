@@ -49,8 +49,8 @@ function generateGridAreas(el,length){
     // console.log('coordinates',coordinates);
 }
 
-function putPixel(x, y, canvas){
-    let grid = document.getElementsByClassName(canvas)[0];
+function putPixel(x, y){
+    let grid = document.getElementsByClassName('test')[0];
     let i = 0;
     while(i < 8){
         let pixel = document.createElement('div');
@@ -62,6 +62,35 @@ function putPixel(x, y, canvas){
     
 }
 
-putPixel(0, 6,'test');
+//implmented Brasenhams algorithm adapted from this C example: https://www.geeksforgeeks.org/bresenhams-circle-drawing-algorithm/
 
+function drawCircle(xc,yc,x,y){
+    putPixel(xc + x,yc + y);
+    putPixel(xc - x,yc + y);
+    putPixel(xc + x,yc - y);
+    putPixel(xc - x,yc - y);
+    putPixel(xc + y,yc + x);
+    putPixel(xc - y,yc + x);
+    putPixel(xc + y,yc - x);
+    putPixel(xc - y,yc - x);
+}
+
+function circleBres(xc,yc, r) { 
+    let x = 0, y = r; 
+    let d = 3 - 2 * r; 
     
+    drawCircle(xc, yc, x, y); 
+    
+    while (y >= x) { 
+      x++; 
+        if (d > 0){ 
+            y--;  
+            d = d + 4 * (x - y) + 10; 
+        } 
+        else
+            d = d + 4 * x + 6; 
+        drawCircle(xc, yc, x, y); 
+    } 
+} 
+
+circleBres(0,0,7);
