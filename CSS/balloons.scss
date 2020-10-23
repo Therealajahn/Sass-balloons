@@ -1,4 +1,7 @@
 body {
+  padding: 0;
+  border: 0;
+
   background: #000;
   font-family: "Krona One", sans-serif;
   display: grid;
@@ -7,7 +10,6 @@ body {
 .test {
   justify-self: center;
   align-self: center;
-  
   height: 500px;
   width: 500px;
   background: #2a3c31;
